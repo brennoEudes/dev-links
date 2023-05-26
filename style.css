@@ -1,3 +1,10 @@
 body {
-  background-color: aquamarine;
+  /* 
+  background-image: url(./assets/bg-mobile-dark\ \(1080x1920\).jpg); /*chama a imagem da pasta assets
+  background-repeat: no-repeat; /* evita a repetição da imagem
+  background-position: top center; /* eixo y da imagem a partir do seu ponto inicial e eixo x centralizado
+  background-size: cover; /* imagem cobre toda a viewport*/
+
+  /* Os atributos acima em shorthand: */
+  background: url(./assets/bg-mobile-dark\ \(1080x1920\).jpg) no-repeat top center/cover;
 }
