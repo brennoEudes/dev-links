@@ -1,3 +1,9 @@
+* { /* reset universal*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   /* 
   background-image: url(./assets/bg-mobile-dark\ \(1080x1920\).jpg); /*chama a imagem da pasta assets
@@ -6,5 +12,32 @@ body {
   background-size: cover; /* imagem cobre toda a viewport*/
 
   /* Os atributos acima em shorthand: */
-  background: url(./assets/bg-mobile-dark\ \(1080x1920\).jpg) no-repeat top center/cover;
+  background: url(./assets/bg-mobile-dark-1080x1920.jpg) no-repeat top
+    center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+}
+
+#container {
+  width: 360px;
+  border: 1px solid red;
+  margin: auto; /* centraliza caixas que possuem largura fixa. Divide automaticamente o espaço vazio po2, e insere as partes em ambos os lados */
+}
+
+#profile {
+  /* elemento pai de img editando o alinhamento do elemento filho */
+  text-align: center;
+}
+
+#profile img {
+  /*display: inline-block; /* Mantém as props. inline mas permite também a aplicação de props. do tipo block*/
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
 }
