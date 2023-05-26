@@ -24,12 +24,14 @@ body * {
 #container {
   width: 360px;
   border: 1px solid red;
-  margin: auto; /* centraliza caixas que possuem largura fixa. Divide automaticamente o espaço vazio po2, e insere as partes em ambos os lados */
+  /*margin: auto; /* centraliza caixas que possuem largura fixa. Divide automaticamente o espaço vazio po2, e insere as partes em ambos os lados */
+  margin: 56px auto 0px;
 }
 
 #profile {
   /* elemento pai de img editando o alinhamento do elemento filho */
   text-align: center;
+  padding: 24px;
 }
 
 #profile img {
@@ -40,4 +42,5 @@ body * {
 #profile p {
   font-weight: 500;
   line-height: 24px;
+  margin-top: 8px;
 }
