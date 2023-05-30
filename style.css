@@ -70,12 +70,23 @@ body * {
 }
 
 /* Switch */
+#switch {
+  position: relative; /* Altera a referência de posicionamento do elementos switch button */
+  width: 64px;
+  margin: 4px auto; /* Elemento block, "auto" p/ alinhar ao centro da vh no eixo x e add margin vertical*/
+}
+
 #switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch-bg-url) no-repeat center; /* Shorthand botão */
   border: 0;
   border-radius: 50%;
+  position: absolute; /* Sobrepõe os elementos */
+  z-index: 1; /* Sobreposição de 1 layer */
+  left: 0;
+  transform: translateY(-50%); /* 1º Sobe % do eixo y em relação ao switch */
+  top: 50%; /* 2º Desce 50% do eixo y em relação ao switch button. */
 }
 
 #switch span {
@@ -86,6 +97,12 @@ body * {
   border: 1px solid var(--stroke-color);
   -webkit-backdrop-filter: blur(4px); /* Adicionar webkit para funcionar em outros browsers */
   border-radius: 9999px;
+}
+
+/* Estrutura de alteração de modo light/dark */
+.light #switch button {
+  right: 0;
+  left: initial; /* volta ao estado inicial */
 }
 
 /* links */
