@@ -8,7 +8,7 @@
 /* Escolhemos nomes quaisquer para definir os atributos de cor, background, cor borda, cor botão e cor entorno, imagem botão, que serão recebidos nos lugares indicados na página. */
 :root {
   --text-color: white;
-  --bg-url: url(./assets/bg-mobile-dark-1080x1920.jpg); 
+  --bg-url: url(./assets/bg-mobile-dark-1080x1920.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: (0, 0, 0, 0.02);
@@ -16,7 +16,8 @@
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
-.light { /* Alterações dos atributos para o modo light! */
+.light {
+  /* Alterações dos atributos para o modo light! */
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light-1080x1920.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
@@ -34,8 +35,8 @@ body {
   background-size: cover; /* imagem cobre toda a viewport*/
 
   /* Os atributos acima em shorthand: */
-  background: var(--bg-url) no-repeat top /* Recebe o atributo definido em :root */
-    center/cover;
+  background: var(--bg-url) no-repeat top
+    /* Recebe o atributo definido em :root */ center/cover;
 }
 
 body * {
@@ -75,6 +76,16 @@ body * {
   background: white var(--switch-bg-url) no-repeat center; /* Shorthand botão */
   border: 0;
   border-radius: 50%;
+}
+
+#switch span {
+  display: block; /* Span por padrão é inline, por isso, precisamos transformar em block para aceitar algumas props*/
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: blur(4px); /* Adicionar webkit para funcionar em outros browsers */
+  border-radius: 9999px;
 }
 
 /* links */
