@@ -5,6 +5,27 @@
   box-sizing: border-box;
 }
 
+/* Escolhemos nomes quaisquer para definir os atributos de cor, background, cor borda, cor botão e cor entorno, imagem botão, que serão recebidos nos lugares indicados na página. */
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile-dark-1080x1920.jpg); 
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: (0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light { /* Alterações dos atributos para o modo light! */
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light-1080x1920.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: (0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
 body {
   /* 
   background-image: url(./assets/bg-mobile-dark\ \(1080x1920\).jpg); /*chama a imagem da pasta assets
@@ -13,13 +34,13 @@ body {
   background-size: cover; /* imagem cobre toda a viewport*/
 
   /* Os atributos acima em shorthand: */
-  background: url(./assets/bg-mobile-dark-1080x1920.jpg) no-repeat top
+  background: var(--bg-url) no-repeat top /* Recebe o atributo definido em :root */
     center/cover;
 }
 
 body * {
   font-family: "Inter", sans-serif;
-  color: #ffffff;
+  color: var(--text-color); /* Recebe o atributo definido em :root */
 }
 
 #container {
@@ -29,6 +50,7 @@ body * {
   padding: 0 24px;
 }
 
+/* Profile */
 #profile {
   /* elemento pai de img editando o alinhamento do elemento filho */
   text-align: center;
@@ -46,6 +68,15 @@ body * {
   margin-top: 8px;
 }
 
+/* Switch */
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center; /* Shorthand botão */
+  border: 0;
+  border-radius: 50%;
+}
+
 /* links */
 ul {
   list-style: none; /* retira os bulletpoints */
@@ -61,8 +92,8 @@ ul li a {
   align-items: center;
   justify-content: center;
   padding: 16px 24px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
   border-radius: 8px;
   backdrop-filter: blur(4px); /* efeito de embaçamento */
   -webkit-backdrop-filter: blur(
@@ -75,8 +106,8 @@ ul li a {
 
 /* pseudo-selector */
 ul li a:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid white;
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color); /* Recebe o atributo definido em :root */
 }
 
 /*social links*/
@@ -98,7 +129,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--highlight-color);
 }
 
 footer {
