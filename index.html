@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="light">
   <head>
     <!--importando fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,16 +20,16 @@
       <div id="profile">
         <!--#nome_do_id e enter, criar uma div com id automaticamente-->
         <img
-          src="./assets/avatar-brenno.png"
+          src="./assets/avatar-light.png"
           alt="Foto perfil Brenno Eudes sorrindo."
         />
         <!--img e enter, criar uma tag img com os atribuitos automaticamente-->
         <p>@BrennoEudes</p>
       </div>
-      <div id="switch">
+      <div id="switch" onclick="toggleMode()">
+        <!--Adiciona a função JS-->
         <button></button>
-        <span>
-        </span>
+        <span> </span>
       </div>
       <ul>
         <li>
@@ -73,8 +73,11 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="./script.js"></script>
+    <!--Conexação com arquivo JS-->
     <footer>
-      Feito com ♥ pela <a href="https://www.rocketseat.com.br/" target="_blank">Rocketseat</a>
+      Feito com ♥ pela
+      <a href="https://www.rocketseat.com.br/" target="_blank">Rocketseat</a>
     </footer>
   </body>
 </html>
