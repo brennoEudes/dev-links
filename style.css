@@ -45,7 +45,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100px;
+  max-width: 588px; /* Responsividade para dispositivos grandes. Medida indicada no Figma. */
   /*margin: auto; /* centraliza caixas que possuem largura fixa. Divide automaticamente o espaço vazio po2, e insere as partes em ambos os lados */
   margin: 56px auto 0px;
   padding: 0 24px;
