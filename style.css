@@ -89,6 +89,11 @@ body * {
   left: 0;
   transform: translateY(-50%); /* 1º Sobe % do eixo y em relação ao switch */
   top: 50%; /* 2º Desce 50% do eixo y em relação ao switch button. */
+  animation: slide-back 0.4s; /* Chama a animação e define o tempo. Diferente da l.110, não precisa "forwards"pois o estado inicial é left 0 (l.89)*/
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -97,14 +102,21 @@ body * {
   height: 24px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
-  -webkit-backdrop-filter: blur(4px); /* Adicionar webkit para funcionar em outros browsers */
+  -webkit-backdrop-filter: blur(
+    4px
+  ); /* Adicionar webkit para funcionar em outros browsers */
   border-radius: 9999px;
 }
 
 /* Estrutura de alteração de modo light/dark */
 .light #switch button {
+  /* Estrutura nova */
+  animation: slide-in 0.4s forwards; /* Chama a animação, define o tempo, e "fowards" mantém as props finais de slide-in, impedindo a volta ao estado inicial.*/
+  
+  /* Estrutura antiga
   right: 0;
-  left: initial; /* volta ao estado inicial */
+  left: initial; /* volta ao estado inicial 
+  */
 }
 
 /* links */
@@ -173,15 +185,31 @@ footer {
 /* Regras que serão aplicadas somente em dispositivos com largura >= que a indicada abaixo */
 @media (min-width: 700px) {
   :root {
-  --bg-url: url(./assets/bg-desktop-dark.jpg);
-}
+    --bg-url: url(./assets/bg-desktop-dark.jpg);
+  }
 
-.light {
-  --bg-url: url(./assets/bg-desktop-light.jpg);
-};
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
 
 /* Animações */
-@keyframes slide-in {
-  
+@keyframes slide-in { /* O nome pode ser qq um*/
+  from {
+    /* Onde começa */
+    left: 0;
+  }
+  to {
+    /* Onde termina a brincadeira */
+    left: 50%;
+  }
+}
+
+@keyframes slide-back { /* O nome pode ser qq um*/
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
