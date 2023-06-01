@@ -180,3 +180,8 @@ footer {
   --bg-url: url(./assets/bg-desktop-light.jpg);
 };
 }
+
+/* Animações */
+@keyframes slide-in {
+  
+}
