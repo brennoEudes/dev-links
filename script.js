@@ -17,9 +17,9 @@ function toggleMode() {
   // 4º instrução: substituir img
   if(html.classList.contains('light')) {
     img.setAttribute("src", "./assets/avatar-light.png"); // se light, add image light
-    img.setAttribute("alt","Foto perfil Brenno Eudes sorrindo.");
+    img.setAttribute("alt","Foto perfil Brenno Eudes cabelo preso sorrindo.");
   } else {
     img.setAttribute("src", "./assets/avatar-dark.png"); // sem light, add image dark
-    img.setAttribute("alt", "Foto Mayk Brito sorrindo.")
+    img.setAttribute("alt", "Foto perfil Brenno Eudes cabelo solto sorrindo.")
   }
 }
