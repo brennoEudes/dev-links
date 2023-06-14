@@ -13,13 +13,16 @@ function toggleMode() {
 
   // 3º instrução: pegar tag img
   const img = document.querySelector("#profile img") // msm do CSS
+  const footerImg = document.querySelector("footer img")
 
   // 4º instrução: substituir img
-  if(html.classList.contains('light')) {
-    img.setAttribute("src", "./assets/avatar-light.png"); // se light, add image light
-    img.setAttribute("alt","Foto perfil Brenno Eudes cabelo preso sorrindo.");
+  if (html.classList.contains("light")) {
+    img.setAttribute("src", "./assets/avatar-light.png") // se light, add image light
+    img.setAttribute("alt", "Foto perfil Brenno Eudes cabelo preso sorrindo.")
+    footerImg.setAttribute("src", "./assets/christ-redeemer-icon-light-mode.png");
   } else {
     img.setAttribute("src", "./assets/avatar-dark.png"); // sem light, add image dark
-    img.setAttribute("alt", "Foto perfil Brenno Eudes cabelo solto sorrindo.")
+    img.setAttribute("alt", "Foto perfil Brenno Eudes cabelo solto sorrindo.");
+    footerImg.setAttribute("src", "./assets/christ-redeemer-icon-dark-mode.png");
   }
 }
