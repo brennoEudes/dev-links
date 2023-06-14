@@ -112,7 +112,7 @@ body * {
 .light #switch button {
   /* Estrutura nova */
   animation: slide-in 0.4s forwards; /* Chama a animação, define o tempo, e "fowards" mantém as props finais de slide-in, impedindo a volta ao estado inicial.*/
-  
+
   /* Estrutura antiga
   right: 0;
   left: initial; /* volta ao estado inicial 
@@ -129,7 +129,6 @@ ul {
 }
 
 ul li a {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,9 +174,14 @@ ul li a:hover {
 }
 
 footer {
-  padding: 24px 0;
+  padding: 24px;
   text-align: center;
   font-size: 14px;
+  font-weight: 500;
+}
+
+footer img {
+  width: 24px;
 }
 
 /* Media Queries */
@@ -194,7 +198,8 @@ footer {
 }
 
 /* Animações */
-@keyframes slide-in { /* O nome pode ser qq um*/
+@keyframes slide-in {
+  /* O nome pode ser qq um*/
   from {
     /* Onde começa */
     left: 0;
@@ -205,7 +210,8 @@ footer {
   }
 }
 
-@keyframes slide-back { /* O nome pode ser qq um*/
+@keyframes slide-back {
+  /* O nome pode ser qq um*/
   from {
     left: 50%;
   }
